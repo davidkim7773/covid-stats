@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import CountryStats from "./components/CountryStats";
 import NavBar from "./components/NavBar";
-import styles from "styles.scss";
+import "./app";
 
 function App() {
   const [covidData, setCovidData] = useState(null);
@@ -12,10 +13,15 @@ function App() {
   const fetchCovidData = () => {
     fetch("https://coronavirus.m.pipedream.net")
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => setCovidData(data));
   };
 
-  return <NavBar />;
+  return (
+    <div>
+      <NavBar />
+      <CountryStats covidData={covidData} />
+    </div>
+  );
 }
 
 export default App;

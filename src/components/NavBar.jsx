@@ -1,7 +1,9 @@
+import "./styles/NavBar.scss";
+
 const NavBar = () => {
   return (
     <div className="NavBar">
-      <ul>
+      <ul className="NavBarList">
         <li>
           <button>Covid Data</button>
         </li>
