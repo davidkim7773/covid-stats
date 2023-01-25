@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import GlobalStats from "./components/GlobalStats";
 import NavBar from "./components/NavBar";
+import { northAmericaData, europeData } from "./lib/helperFunc";
 import "./app";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
     // Catch Errors
     if (res.ok) {
       const newData = await res.json();
+      console.log(newData);
       setCovidData(newData.response);
     } else if (!res.ok) {
       const msg = `An error has occured with fetching Covid Data ${res.status}`;
@@ -28,10 +30,8 @@ function App() {
     }
   }
 
-  console.log(covidData);
-
-  // Test Function For United States only
-  const unitedStatesData = (data) => {};
+  console.log(northAmericaData(covidData));
+  console.log(europeData(covidData));
 
   return (
     <div>
