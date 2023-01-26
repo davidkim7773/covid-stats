@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import CountryStats from "../components/CountryStats";
 import GlobalStats from "../components/GlobalStats";
 import NavBar from "../components/NavBar";
-import { northAmericaData, europeData } from "../lib/countryCovidData";
 
 const MainContainer = () => {
   const [covidCountryData, setCovidCountryData] = useState(null);
