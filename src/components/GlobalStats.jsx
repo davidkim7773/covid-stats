@@ -1,9 +1,18 @@
 const GlobalStats = (props) => {
-  const { covidData } = props;
+  const { covidGlobalData } = props;
+
+  // Cleaner Values
+  const totalCases = covidGlobalData.confirmed;
+  const totalDeaths = covidGlobalData.deaths;
 
   return (
     <div>
-      <h1>test</h1>
+      <div>
+        <span>{totalCases.toLocaleString()}</span>
+      </div>
+      <div>
+        <span>{totalDeaths.toLocaleString()}</span>
+      </div>
     </div>
   );
 };

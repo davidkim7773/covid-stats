@@ -5,8 +5,8 @@ import NavBar from "../components/NavBar";
 import { northAmericaData, europeData } from "../lib/countryCovidData";
 
 const MainContainer = () => {
-  const [covidCountryData, setCovidCountryData] = useState("");
-  const [covidGlobalData, setGlobalCovidData] = useState("");
+  const [covidCountryData, setCovidCountryData] = useState(null);
+  const [covidGlobalData, setGlobalCovidData] = useState(null);
 
   useEffect(() => {
     fetchCovidData();
@@ -30,7 +30,7 @@ const MainContainer = () => {
     }
   };
 
-  const fetchGlobalCovidData = () => {
+  const fetchGlobalCovidData = async () => {
     const options = {
       method: "GET",
       headers: {
