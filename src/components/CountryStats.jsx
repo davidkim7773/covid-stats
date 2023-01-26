@@ -6,12 +6,12 @@ import {
   africaData,
   oceaniaData,
 } from "../lib/countryCovidData";
-import styles from "./styles/CountryStats.module.scss";
+import styles from "./styles";
 
 const CountryStats = (props) => {
   const { covidCountryData } = props;
 
-  return <h1 className={styles.test}>big text</h1>;
+  return <h1 className={styles.country.test}>big text</h1>;
 };
 
 export default CountryStats;
