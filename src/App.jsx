@@ -1,11 +1,11 @@
 import MainContainer from "./containers/MainContainer";
 
-function App() {
+const App = () => {
   return (
     <div>
       <MainContainer />
     </div>
   );
-}
+};
 
 export default App;

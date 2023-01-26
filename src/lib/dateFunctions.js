@@ -1,4 +1,4 @@
-// Convert Date Obj into a string in YYYY-MM-DD Format
-export const isoDateFunction = (date) => {
-  return date.toISOString().slice(0, 10)
+// Ensure proper comma spacing within numbers for cleaner look. 
+export function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
