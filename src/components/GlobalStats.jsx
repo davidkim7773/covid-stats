@@ -1,3 +1,5 @@
+import styles from "./styles";
+
 const GlobalStats = (props) => {
   const { covidGlobalData } = props;
 
@@ -6,7 +8,7 @@ const GlobalStats = (props) => {
   const totalDeaths = covidGlobalData.deaths;
 
   return (
-    <div>
+    <div className={styles.global.globalContainer}>
       <div>
         <span>{totalCases.toLocaleString()}</span>
       </div>
