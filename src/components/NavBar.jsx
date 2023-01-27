@@ -1,7 +1,9 @@
+import styles from "./styles";
+
 const NavBar = () => {
   return (
-    <div className="NavBar">
-      <ul className="NavBarList">
+    <div className={styles.navbar.container}>
+      <ul className={styles.navbar.navBarList}>
         <li>
           <button>Covid Data</button>
         </li>
