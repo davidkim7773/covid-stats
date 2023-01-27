@@ -21,7 +21,9 @@ As always, grateful for the opportunity, I bring heart and passion to any team; 
 
 <br>
 
-<h1 align='center'> <br>Component Flow<br> </h1>
+## Component Flow
+
+<br>
 
 <h1 align='center'><img src='./public/componentDG.png'/></h1>
 
