@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import syringe from "../../public/syringe.png";
 import styles from "./styles";
 
@@ -10,10 +11,10 @@ const NavBar = () => {
       </div>
       <ul className={styles.navbar.navBarList}>
         <li>
-          <button>Covid Data</button>
+          <Button variant="outlined">Donate To WHO</Button>
         </li>
         <li>
-          <button>Global News</button>
+          <Button variant="outlined">Global News</Button>
         </li>
       </ul>
     </div>

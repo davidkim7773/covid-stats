@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import {
   northAmericaData,
   europeData,
@@ -8,7 +7,7 @@ import {
   africaData,
   oceaniaData,
 } from "../lib/covidContinentData";
-import { numberWithCommas } from "../lib/numberFunctions";
+import { Box, InputLabel, MenuItem, FormControl, Select } from "@mui/material";
 import styles from "./styles";
 
 const CountryStats = (props) => {
@@ -27,15 +26,37 @@ const CountryStats = (props) => {
     }
   };
 
+  const handleChange = (event) => {
+    setCurrentContinent(event.target.value);
+  };
+
   return (
     <div className={styles.continent.container}>
       <div className={styles.continent.subText}>
         <h2>Covid Statistics By Continent</h2>
-        <button
-          onClick={() => setCurrentContinent(europeData(covidContinentData))}
-        >
-          click
-        </button>
+        <Box sx={{ minWidth: 120 }}>
+          <FormControl fullWidth>
+            <InputLabel>Select</InputLabel>
+            <Select
+              label="Age"
+              value={covidContinentData}
+              onChange={handleChange}
+            >
+              <MenuItem value={northAmericaData(covidContinentData)}>
+                North America
+              </MenuItem>
+              <MenuItem value={southAmericaData(covidContinentData)}>
+                South America
+              </MenuItem>
+              <MenuItem value={europeData(covidContinentData)}>Europe</MenuItem>
+              <MenuItem value={africaData(covidContinentData)}>Africa</MenuItem>
+              <MenuItem value={asiaData(covidContinentData)}>Asia</MenuItem>
+              <MenuItem value={oceaniaData(covidContinentData)}>
+                Oceania
+              </MenuItem>
+            </Select>
+          </FormControl>
+        </Box>
       </div>
       <div className={styles.continent.continentStats}>
         <table>
