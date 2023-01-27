@@ -1,21 +1,23 @@
 .continentStats {
   align-items: center;
   display: flex;
-  height: 100%;
-  justify-content: center;
-  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+  width: 67rem;
 
   table {
-    border: 1px solid blue;
-    height: 200px;
-    width: 800px;
-  }
-
-  th {
-    border-bottom: 1px solid black;
+    display: block;
+    border: 1px solid #ccc;
+    height: 33rem;
+    overflow-y: scroll;
+    justify-content: center;
+    width: 75rem;
   }
 
   td {
     text-align: center;
+    width: 75rem;
   }
 }

@@ -1,7 +1,16 @@
 .globalContainer {
-  border: 1px solid hsl(0, 68%, 42%);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  span {
-    display: flex;
+  h2 {
+    font-weight: 600;
+  }
+
+  &Stats{
+    align-items: center;
+    font-weight: bold;
+    justify-content: center;
   }
 }

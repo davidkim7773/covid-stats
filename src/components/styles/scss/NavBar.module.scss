@@ -1,3 +1,21 @@
+.container {
+  align-items: center;
+  display: flex;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+  width: 67rem;
+
+  &Left {
+    align-items: center;
+    display: inline-flex;
+  }
+}
+
 .navBarList {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  right: 10px;
   list-style: none;
 }

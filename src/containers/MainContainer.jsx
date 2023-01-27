@@ -54,9 +54,9 @@ const MainContainer = () => {
   };
 
   return (
-    <div className="">
+    <div className={styles.main.container}>
       <NavBar />
-      <div className>
+      <div>
         {covidGlobalData && (
           <GlobalStats covidGlobalData={covidGlobalData.data} />
         )}

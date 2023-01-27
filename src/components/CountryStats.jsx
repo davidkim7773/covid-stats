@@ -28,12 +28,15 @@ const CountryStats = (props) => {
   };
 
   return (
-    <div>
-      <button
-        onClick={() => setCurrentContinent(europeData(covidContinentData))}
-      >
-        click
-      </button>
+    <div className={styles.continent.container}>
+      <div className={styles.continent.subText}>
+        <h2>Covid Statistics By Continent</h2>
+        <button
+          onClick={() => setCurrentContinent(europeData(covidContinentData))}
+        >
+          click
+        </button>
+      </div>
       <div className={styles.continent.continentStats}>
         <table>
           <tr>
