@@ -7,14 +7,7 @@ import {
   africaData,
   oceaniaData,
 } from "../lib/covidContinentData";
-import {
-  Africa,
-  Asia,
-  Australia,
-  Europe,
-  northAmerica,
-  southAmerica,
-} from "../assets";
+
 import { Box, InputLabel, MenuItem, FormControl, Select } from "@mui/material";
 import styles from "./styles";
 
@@ -43,7 +36,6 @@ const CountryStats = (props) => {
       <div className={styles.continent.subText}>
         <h2>Covid Statistics By Continent</h2>
         <div className={styles.continent.subFeatures}>
-          <img src={northAmerica} />
           <Box className={styles.continent.dropDown}>
             <FormControl sx={{ width: 100 }}>
               <InputLabel id="selectLabel">Select</InputLabel>

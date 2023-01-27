@@ -72,3 +72,17 @@ export const oceaniaData = (data) => {
   }
   return ocArr;
 }
+
+// This was a general function created to make the code more dry, however, this JS code would crash Chrome/Browser for whatever reason...
+
+export const generalData = (data, region) => {
+  const countryData = [];
+  if (data) {
+    for (let i = 0; i < data.length; i += 1) {
+      if (data[i].continent === region) {
+        data.push(data[i])
+      }
+    }
+  }
+  return countryData;
+}

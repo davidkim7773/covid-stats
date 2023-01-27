@@ -1,12 +1,12 @@
 import { Button } from "@mui/material";
-import logo from "../assets/covidLogo.png";
+import { logo } from "../assets";
 import styles from "./styles";
 
 const NavBar = () => {
   return (
     <div className={styles.navbar.container}>
       <div className={styles.navbar.containerLeft}>
-        <img src={logo} className={styles.navbar.containerSyringe} />
+        <img src={logo} />
         <h1>Information</h1>
       </div>
       <ul className={styles.navbar.navBarList}>
