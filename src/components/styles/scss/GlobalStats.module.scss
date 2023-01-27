@@ -1,11 +1,15 @@
-.globalContainer {
+@use '../utilities/variables' as *;
+
+.container {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  // margin: 1.0rem 0 1.0rem 0;
 
   h2 {
-    font-weight: 600;
+    font-weight: 200;
+    font-size: 1.75rem;
   }
 
   &Stats{
@@ -13,4 +17,8 @@
     font-weight: bold;
     justify-content: center;
   }
+}
+
+.animation {
+  font-size: 1.75rem;
 }

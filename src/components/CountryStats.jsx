@@ -7,6 +7,14 @@ import {
   africaData,
   oceaniaData,
 } from "../lib/covidContinentData";
+import {
+  Africa,
+  Asia,
+  Australia,
+  Europe,
+  northAmerica,
+  southAmerica,
+} from "../assets";
 import { Box, InputLabel, MenuItem, FormControl, Select } from "@mui/material";
 import styles from "./styles";
 
@@ -34,29 +42,36 @@ const CountryStats = (props) => {
     <div className={styles.continent.container}>
       <div className={styles.continent.subText}>
         <h2>Covid Statistics By Continent</h2>
-        <Box sx={{ minWidth: 120 }}>
-          <FormControl fullWidth>
-            <InputLabel>Select</InputLabel>
-            <Select
-              label="Age"
-              value={covidContinentData}
-              onChange={handleChange}
-            >
-              <MenuItem value={northAmericaData(covidContinentData)}>
-                North America
-              </MenuItem>
-              <MenuItem value={southAmericaData(covidContinentData)}>
-                South America
-              </MenuItem>
-              <MenuItem value={europeData(covidContinentData)}>Europe</MenuItem>
-              <MenuItem value={africaData(covidContinentData)}>Africa</MenuItem>
-              <MenuItem value={asiaData(covidContinentData)}>Asia</MenuItem>
-              <MenuItem value={oceaniaData(covidContinentData)}>
-                Oceania
-              </MenuItem>
-            </Select>
-          </FormControl>
-        </Box>
+        <div className={styles.continent.subFeatures}>
+          <img src={northAmerica} />
+          <Box className={styles.continent.dropDown}>
+            <FormControl sx={{ width: 100 }}>
+              <InputLabel id="selectLabel">Select</InputLabel>
+              <Select
+                label="North America"
+                value={covidContinentData}
+                onChange={handleChange}
+              >
+                <MenuItem value={northAmericaData(covidContinentData)}>
+                  North America
+                </MenuItem>
+                <MenuItem value={southAmericaData(covidContinentData)}>
+                  South America
+                </MenuItem>
+                <MenuItem value={europeData(covidContinentData)}>
+                  Europe
+                </MenuItem>
+                <MenuItem value={africaData(covidContinentData)}>
+                  Africa
+                </MenuItem>
+                <MenuItem value={asiaData(covidContinentData)}>Asia</MenuItem>
+                <MenuItem value={oceaniaData(covidContinentData)}>
+                  Oceania
+                </MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
+        </div>
       </div>
       <div className={styles.continent.continentStats}>
         <table>

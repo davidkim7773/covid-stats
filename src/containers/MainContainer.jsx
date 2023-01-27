@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { useFetch } from "../lib/customHooks";
 import CountryStats from "../components/CountryStats";
 import GlobalStats from "../components/GlobalStats";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
 import styles from "../components/styles";
 
 const MainContainer = () => {
@@ -63,6 +63,7 @@ const MainContainer = () => {
         {covidContinentData && (
           <CountryStats covidContinentData={covidContinentData} />
         )}
+        {covidContinentData && <Footer />}
       </div>
     </div>
   );

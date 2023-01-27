@@ -1,20 +1,34 @@
 import { Button } from "@mui/material";
-import syringe from "../../public/syringe.png";
+import logo from "../assets/covidLogo.png";
 import styles from "./styles";
 
 const NavBar = () => {
   return (
     <div className={styles.navbar.container}>
       <div className={styles.navbar.containerLeft}>
-        <img src={syringe} className={styles.navbar.containerSyringe} />
-        <h1>Covid-19 Statistics</h1>
+        <img src={logo} className={styles.navbar.containerSyringe} />
+        <h1>Information</h1>
       </div>
       <ul className={styles.navbar.navBarList}>
         <li>
-          <Button variant="outlined">Donate To WHO</Button>
+          <Button color="inherit" variant="outlined">
+            <a
+              href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/donate"
+              target="_blank"
+            >
+              Donate To WHO
+            </a>
+          </Button>
         </li>
         <li>
-          <Button variant="outlined">Global News</Button>
+          <Button color="inherit" variant="outlined">
+            <a
+              href="https://www.cnn.com/specials/world/coronavirus-outbreak-intl-hnk"
+              target="_blank"
+            >
+              Global Covid News
+            </a>
+          </Button>
         </li>
       </ul>
     </div>

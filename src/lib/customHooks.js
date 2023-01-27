@@ -1,4 +1,4 @@
-// Possible Custom Hook for Memoization of Date
+// Possible Custom Hook for Memoization of Data
 import {useState, useEffect, useRef} from 'react'
 
 export const useFetch = (url, options) => {

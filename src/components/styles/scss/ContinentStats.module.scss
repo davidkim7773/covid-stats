@@ -1,3 +1,23 @@
+@use '../utilities/variables' as *;
+
+.container {
+  h2 {
+    align-items: center;
+    display: inline-block;
+    font-weight: 400;
+    vertical-align: middle;
+  }
+  
+  .subFeatures {
+    display: flex;
+    float: right;
+
+    img {
+      margin-right: 2.0rem;
+    }
+  }
+}
+
 .continentStats {
   align-items: center;
   display: flex;
@@ -10,13 +30,14 @@
   table {
     display: block;
     border: 1px solid #ccc;
-    height: 33rem;
+    height: 28rem;
     overflow-y: scroll;
     justify-content: center;
     width: 75rem;
   }
 
   td {
+    border-bottom: 1px solid $light-gray;
     text-align: center;
     width: 75rem;
   }

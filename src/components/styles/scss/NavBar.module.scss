@@ -1,14 +1,33 @@
+@use '../utilities/variables' as *;
+
 .container {
   align-items: center;
   display: flex;
   margin: auto;
   padding: 0;
   text-align: center;
-  width: 67rem;
+  width: 60rem;
 
   &Left {
     align-items: center;
     display: inline-flex;
+
+    img {
+      width: 15rem;
+      height: auto;
+      padding: 0;
+    }
+
+    h1 {
+      margin-left: 0.5rem;
+      font-weight: 200;
+    }
+  }
+
+  Button {
+    background-color: $skyBlue;
+    color: $white;
+    margin-left: 1.0rem;
   }
 }
 
@@ -18,4 +37,13 @@
   margin-left: auto;
   right: 10px;
   list-style: none;
+
+  Button:hover {
+    color: $skyBlue;
+  }
+
+  a, a:active, a:visited, a:focus {
+    color: inherit;
+    text-decoration: none;
+}
 }
